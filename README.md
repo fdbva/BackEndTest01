@@ -37,19 +37,25 @@ Fim do Enunciado
 ======================
 Dúvida / Raciocínio:
 MVC? Web API?
-/*	Qual a relação entre Professor e Disciplina?
-*   Turma 1 - * Alunos
-*	Turma * - * Disciplinas
-*	Assumir que a disciplina deve ter pelo menos 1 professor?
-*	Neste caso, para criar 5 Disciplinas e apenas 2 professores, precisaria ter
-* um professor vinculado a mais do que uma disciplina:
-*	Disciplina * - 1 Professor
-*	A outra opção seria a Disciplina poder ter 0 professores:
-*	Disciplina 1 - 0..1 Professor
-*	ou Disciplina * - 0..1 Professor
-* 	Mas, por causa desse trecho do enunciado: Disciplina (Id, Nome, Professor)
-* Vou considerar que disciplina deve ter pelo menos 1 professor, o que implica
-* que um professor pode estar vinculado a mais de uma disciplina:
-* 	Disciplina * - 1 Professor
-*	Relação entre Disciplina e Aluno é indireta apenas?
-*/
+
+
+Associações:
+* Turma 1 - * Alunos (one to many)
+* Turma * - * Disciplinas (many to many)
+
+
+* Qual a relação entre Professor e Disciplina?
+
+
+*	Assumir que a disciplina deve ter pelo menos 1 professor, pois para criar
+5 Disciplinas e apenas 2 professores, precisaria ter um professor vinculado a mais do que uma disciplina.
+Por causa desse trecho do enunciado: Disciplina (Id, Nome, Professor)
+vou considerar que disciplina deve ter pelo menos 1 professor, o que implica
+que um professor pode estar vinculado a mais de uma disciplina:
+
+* Professor 1 - * Disciplina (one to many)
+
+
+* Relação entre Disciplina e Aluno é indireta apenas?
+
+
