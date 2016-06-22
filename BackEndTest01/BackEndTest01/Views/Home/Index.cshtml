@@ -3,29 +3,78 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>BackEnd test</h1>
+    <p>Code-First, MVC, 4 models with associations</p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+
+
+        <h2>Enunciado</h2>
+
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Por favor, avalie o teste e, em seguida, me responda se está apto para
+            fazer o teste e nos remeter num prazo de 48 horas úteis.
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+
+        <p>Segue:</p>
+
+        <p>Estágio Back-End</p>
+
+        <p>
+            O candidato deverá desenvolver um projeto que consiste na persistência
+            das seguintes classes:
+        </p>
+
+        <p>Turma (Id, Nome, Turno, Ano)</p>
+
+        <p>Disciplina (Id, Nome, Professor)</p>
+
+        <p>Aluno (Id, Nome, Turma)</p>
+
+        <p>Professor(Id, Nome)</p>
+
+        <p>
+            Realizar as devidas associações entre as classes e persistir 3 Turmas, 5
+            Disciplinas, 15 Alunos e 2 Professores em banco local utilizando o Entity
+            Framework.
+        </p>
+
+        <p>
+            Obs: Uma Turma deve possuir uma lista de Alunos. Uma Disciplina pode
+            pertencer a mais de uma Turma e uma Turma possui diversas Disciplinas.
+            Sugestão de abordagem para construção do projeto: Code-First.
+        </p>
+
+        <h3>Prazo de resposta: 48 horas</h3>
+
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Dúvida / Raciocínio:</h2>
+        <p>MVC? Web API?</p>
+
+        <p>Associações:</p>
+
+        <ul>
+            <li>Turma 1 - * Alunos (one to many)</li>
+            <li><p>Turma * - * Disciplinas (many to many)</p></li>
+            <li><p>Qual a relação entre Professor e Disciplina?</p></li>
+            <li>
+                <p>
+                    Assumir que a disciplina deve ter pelo menos 1 professor, pois para criar
+                    5 Disciplinas e apenas 2 professores, precisaria ter um professor vinculado a mais do que uma disciplina.
+                    Por causa desse trecho do enunciado: Disciplina (Id, Nome, Professor)
+                    vou considerar que disciplina deve ter pelo menos 1 professor, o que implica
+                    que um professor pode estar vinculado a mais de uma disciplina:
+                </p>
+            </li>
+            <li>
+                <p>Professor 1 - * Disciplina (one to many)</p>
+            </li>
+            <li>
+                <p>Relação entre Disciplina e Aluno é indireta apenas?</p>
+            </li>
+        </ul>
     </div>
 </div>

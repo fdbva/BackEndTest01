@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>true</IncludeIisSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -169,11 +170,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlunosController.cs" />
+    <Compile Include="Controllers\DisciplinasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProfessoresController.cs" />
+    <Compile Include="Controllers\TurmasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\BackEndDBContext.cs" />
@@ -202,6 +208,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\BackEndTest01 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -252,6 +259,26 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Alunos\Create.cshtml" />
+    <Content Include="Views\Alunos\Delete.cshtml" />
+    <Content Include="Views\Alunos\Details.cshtml" />
+    <Content Include="Views\Alunos\Edit.cshtml" />
+    <Content Include="Views\Alunos\Index.cshtml" />
+    <Content Include="Views\Disciplinas\Create.cshtml" />
+    <Content Include="Views\Disciplinas\Delete.cshtml" />
+    <Content Include="Views\Disciplinas\Details.cshtml" />
+    <Content Include="Views\Disciplinas\Edit.cshtml" />
+    <Content Include="Views\Disciplinas\Index.cshtml" />
+    <Content Include="Views\Professores\Create.cshtml" />
+    <Content Include="Views\Professores\Delete.cshtml" />
+    <Content Include="Views\Professores\Details.cshtml" />
+    <Content Include="Views\Professores\Edit.cshtml" />
+    <Content Include="Views\Professores\Index.cshtml" />
+    <Content Include="Views\Turmas\Create.cshtml" />
+    <Content Include="Views\Turmas\Delete.cshtml" />
+    <Content Include="Views\Turmas\Details.cshtml" />
+    <Content Include="Views\Turmas\Edit.cshtml" />
+    <Content Include="Views\Turmas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
